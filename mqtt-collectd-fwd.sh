@@ -33,15 +33,9 @@ cd $DIR
 
 # Detect required binaries
 MOSQUITTO_SUB_PATH=$(which mosquitto_sub)
-NETCAT_PATH=$(which netcat)
 
 if [[ -z "$MOSQUITTO_SUB_PATH" ]]; then
     echo "mosquitto_sub not found"
-    exit 1
-fi
-
-if [[ -z "$NETCAT_PATH" ]]; then
-    echo "netcat not found"
     exit 1
 fi
 
